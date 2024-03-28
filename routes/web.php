@@ -1,30 +1,28 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use \App\Http\Controllers\RecipeController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-
 
 Route::get('/', function () {
-    return redirect()->route('home');
-})->middleware('auth'); 
+    return view('recipe.index');
+});
+// /app
+Route::get('/app', function () {
+    return view('recipe.index');
+});
 
 // authentication routes
-Route::group(['prefix' => 'auth'], function () {
-    Route::get('/login', [AuthController::class,'login'])->name('auth.login');
-    Route::post('/login', [AuthController::class,'postLogin'])->name('auth.login');
-    Route::get('/logout', [AuthController::class,'logout'])->name('auth.logout');
-    Route::get('/register', [AuthController::class,'register'])->name('auth.register');
-    Route::get('/recovery', [AuthController::class,'recovery'])->name('auth.recovery');
-    Route::get('/recovery-confirmation', [AuthController::class,'recoveryConfirmation'])->name('auth.recoveryConfirmation');
+Route::group(['prefix' => 'app'], function () {
+    Route::resource('recipes', RecipeController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('tags', TagController::class);
+    Route::get('about', [AboutController::class, 'index']);
 });
 
 
-// protected routes
-Route::group(['middleware' => 'auth'], function () {
-    Route::group(['prefix' => 'app'], function () {
-       Route::get('/', [HomeController::class,"index"])->name('app.home');
-    });
-});
+
 
 
