@@ -1,6 +1,6 @@
 <div align="center">
 
-# Recipe Management System
+# RecipeSage: Recipe Management System
 
 [![GitHub license](https://img.shields.io/github/license/marcuwynu23/rms)](https://github.com/marcuwynu23/rms/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/marcuwynu23/rms)](https://github.com/marcuwynu23/rms/stargazers)
@@ -8,7 +8,7 @@
 
 </div>
 
-Welcome to the Single-User Recipe Management System! This is a desktop or web-based application designed for managing your personal collection of recipes. Whether you're an aspiring chef, a seasoned cook, or simply someone who loves to experiment in the kitchen, this system provides you with a convenient way to organize, store, and access your favorite recipes anytime, anywhere.
+Welcome to the Single-User RecipeSage: Recipe Management System! This is a desktop or web-based application designed for managing your personal collection of recipes. Whether you're an aspiring chef, a seasoned cook, or simply someone who loves to experiment in the kitchen, this system provides you with a convenient way to organize, store, and access your favorite recipes anytime, anywhere.
 
 ## Features
 
